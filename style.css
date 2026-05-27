@@ -1,0 +1,111 @@
+:root {
+    --primary: #00ff88;    /* Verde Vibrante (Ação) */
+    --bg-dark: #0a0a0a;   /* Preto suavizado */
+    --error-bg: #2d0505;  /* Vermelho escuro para a 'Dor' */
+    --text-main: #ffffff;
+    --text-dim: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Container para evitar que o texto encoste nas bordas */
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsivo */
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #fff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 20px; /* Aumentamos um pouco para destaque */
+    line-height: 1.6;
+    margin-bottom: 35px; /* Mais espaço para o botão respirar */
+    max-width: 600px; /* Mantém a linha de leitura confortável */
+    
+    /* Novo Efeito: Texto degradê sutil para combinar com o título */
+    background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Fallback para navegadores antigos */
+    color: #cccccc; 
+    
+    /* Centralização garantida (caso não esteja no flex container) */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.linkcompra {
+    background: var(--primary);
+    display: inline-block;
+    color: #000;
+    padding: 20px 40px;
+    border-radius: 50px; /* Botão mais moderno */
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    transition: 0.3s;
+}
+
+.linkcompra:hover {
+    transform: scale(1.1); /* Aumenta levemente */
+    filter: brightness(1.2); /* Dá um brilho extra no verde */
+    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.5); /* Aumenta a sombra */
+}
+
+/* Seção Problema - Mudamos de vermelho berrante para algo elegante */
+.problema {
+    background: var(--error-bg);
+    border: 1px solid #4a0000;
+    border-left: 5px solid red;
+    border-bottom: 5px solid red;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.problema h2 { 
+    color: #ff4d4d; 
+}
+
+.solucao h2 {
+    color: var(--primary);
+}
