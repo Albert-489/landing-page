@@ -109,3 +109,13 @@ section {
 .solucao h2 {
     color: var(--primary);
 }
+
+.solucao{
+    background: rgba(2, 31, 2, 0.37);
+    border: 1px solid #306102;
+    border-left: 5px solid rgb(21, 255, 0);
+    border-bottom: 5px solid rgb(21, 255, 0);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
